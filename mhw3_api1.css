@@ -1,0 +1,276 @@
+body{
+    margin:0;
+    color: black;
+    background-color: whitesmoke;
+    font-family: 'Prompt', sans-serif;
+    font-size:20px;
+    text-align: center;
+}
+
+header{
+    background-image: url(https://www.macleans.ca/wp-content/uploads/2014/03/MAC14_COOKBOOK_STORE_POST01.jpg);
+    background-size:cover;
+    background-position:center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 550px;
+    text-align: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+header nav{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    top:0;
+    right: 0;
+    left:0;
+}
+
+#logo img{
+    border: 3px solid black;
+    border-radius: 100%;
+    width: 50%;
+    height: auto;
+    margin-top: 5px;
+}
+
+#menu{
+    display: flex;
+    flex-direction: column;
+}
+
+#menu a{
+    text-decoration: none;
+    font-size: 0.8em;
+    cursor: pointer;
+    border-radius: 100px;
+    margin: 15px;
+    padding:5px;
+    border: 3px solid black;
+    background-color: rgb(244, 173, 10);
+    font-weight: bold;
+}
+
+#menu a:hover{ background-color: rgba(244, 173, 10, .5); }
+
+#menu a:active{ color: unset; }
+    
+#menu a:any-link{ color: unset; }
+
+#menu-mobile div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 2px;
+}
+
+#menu-mobile{ display: none; }
+
+#main_title{
+    text-shadow: grey 2px 2px;
+    color: rgb(244, 173, 10);
+    font-size:2em;
+    z-index: 1;
+    margin:0;
+}
+
+#album-ricette{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 40px 0px;
+
+}
+
+.ricetta{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+
+.title{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.title:hover{
+    background-color: rgba(244, 173, 10, .5);
+}
+
+.title_clicked{
+    background-color: rgba(244, 173, 10, .7);
+}
+
+.arrows{
+    width: 20px;
+    height: 20px;
+}
+
+.recipe-name{
+    color: black;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.recipe-name:hover{
+    text-decoration: underline;
+}
+
+.boxes{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    width: 100%;
+    align-items: center;
+}
+
+.preview-recipe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+}
+
+.foto-ricetta{
+    height: 20%;
+    width: 30%;
+    margin:20px;
+    border-radius: 20px;
+}
+
+.list{
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: rgba(244, 173, 10, .7);
+    border-radius: 20px;
+}
+
+.ingrediente{
+    font-size: .8em;
+    margin-bottom: 3px;
+    text-align: justify;
+}
+
+.procedimento{
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+}
+
+.steps{
+    font-family: 'M PLUS 1p', sans-serif;
+    margin: 6px 0px;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+footer{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: whitesmoke;
+    display: flex;
+    justify-content:space-around;
+    background-color: rgb(40, 39, 40);
+    height: 200px;
+}
+
+.info{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+    width: calc(80%/3);
+}
+ 
+.info h1{ color: rgb(92, 86, 86); }
+
+.info p{
+    margin:0;
+    font-size:0.9em;
+}
+
+.info strong{
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.info address{ margin-top: 20px; }
+
+#footer-mobile{ display:none; }
+
+.hidden{
+    display: none;
+}
+
+
+@media (max-width: 500px) {
+    body { font-size: 14.5px;}
+
+    #menu{ display: none; }
+
+    #menu-mobile { display: block; }
+
+    header{ height:200px; }
+
+    #logo { width: 17%; }
+
+
+    footer{ height:90px; }
+
+    #footer-mobile {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .f-m{
+        text-align: center;
+        width: calc(93%/3);
+    }
+
+    .f-m a{
+        color: rgb(92, 86, 86);
+        text-decoration: underline;
+    }
+
+    #footer-mobile h1{
+    color:whitesmoke;
+    font-size: 1rem;
+    text-align: center;
+    }
+
+    .info{ display:none; }
+    
+    .preview-recipe{
+        flex-direction: column;
+    }
+
+    .foto-ricetta{
+        width: 60%;
+        margin: 5px;
+    }
+
+    .list{
+        width: 60%;
+    }
+}
